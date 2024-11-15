@@ -63,8 +63,52 @@ Type "help", "copyright", "credits" or "license" for more information.
 ...             epochs=50,
 ...             imgsz=640)
 
+여기서 망한 점...
+Results saved to C:\Users\admin\runs\detect\train11
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\admin\anaconda3\envs\v8\lib\site-packages\ultralytics\utils\__init__.py", line 216, in __repr__
+    return self.__str__()
+  File "C:\Users\admin\anaconda3\envs\v8\lib\site-packages\ultralytics\utils\__init__.py", line 204, in __str__
+    v = getattr(self, a)
+  File "C:\Users\admin\anaconda3\envs\v8\lib\site-packages\ultralytics\utils\__init__.py", line 221, in __getattr__
+    raise AttributeError(f"'{name}' object has no attribute '{attr}'. See valid attributes below.\n{self.__doc__}")
+AttributeError: 'DetMetrics' object has no attribute 'curves_results'. See valid attributes below.
+
+    Utility class for computing detection metrics such as precision, recall, and mean average precision (mAP) of an
+    object detection model.
+
+    Args:
+        save_dir (Path): A path to the directory where the output plots will be saved. Defaults to current directory.
+        plot (bool): A flag that indicates whether to plot precision-recall curves for each class. Defaults to False.
+        on_plot (func): An optional callback to pass plots path and data when they are rendered. Defaults to None.
+        names (dict of str): A dict of strings that represents the names of the classes. Defaults to an empty tuple.
+
+    Attributes:
+        save_dir (Path): A path to the directory where the output plots will be saved.
+        plot (bool): A flag that indicates whether to plot the precision-recall curves for each class.
+        on_plot (func): An optional callback to pass plots path and data when they are rendered.
+        names (dict of str): A dict of strings that represents the names of the classes.
+        box (Metric): An instance of the Metric class for storing the results of the detection metrics.
+        speed (dict): A dictionary for storing the execution time of different parts of the detection process.
+
+    Methods:
+        process(tp, conf, pred_cls, target_cls): Updates the metric results with the latest batch of predictions.
+        keys: Returns a list of keys for accessing the computed detection metrics.
+        mean_results: Returns a list of mean values for the computed detection metrics.
+        class_result(i): Returns a list of values for the computed detection metrics for a specific class.
+        maps: Returns a dictionary of mean average precision (mAP) values for different IoU thresholds.
+        fitness: Computes the fitness score based on the computed detection metrics.
+        ap_class_index: Returns a list of class indices sorted by their average precision (AP) values.
+        results_dict: Returns a dictionary that maps detection metric keys to their computed values.
+        curves: TODO
+        curves_results: TODO
+
+이게 무슨 에러일까.... 잠이나 디비자보도록하자자
+
 deepsort
 https://velog.io/@junwoo0525/YOLOv8%EC%9D%84-OpenCV%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8F%99%EC%9E%91%EC%8B%9C%ED%82%A4%EA%B8%B0
 이거 보고 참조하면 될듯
+
 
 
