@@ -63,6 +63,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 ...             epochs=50,
 ...             imgsz=640)
 
-
+deepsort
+https://velog.io/@junwoo0525/YOLOv8%EC%9D%84-OpenCV%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8F%99%EC%9E%91%EC%8B%9C%ED%82%A4%EA%B8%B0
+이거 보고 참조하면 될듯
 
 
